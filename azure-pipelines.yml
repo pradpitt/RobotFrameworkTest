@@ -20,7 +20,7 @@ steps:
       versionSpec: '$(python.version)'
       architecture: 'x64'
 
-  - script: pip install robotframework robotframework-seleniumlibrary && npm install chromedriver
+  - script: python -m pip install --upgrade pip && pip install --upgrade robotframework robotframework-selenium2library && npm install chromedriver
     displayName: 'Install dependencies'
 
   - bash: robot -d Results/ApiTestResults Tests/openWebPage.robot
