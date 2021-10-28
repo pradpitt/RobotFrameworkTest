@@ -23,7 +23,7 @@ steps:
   - script: python -m pip install --upgrade pip && pip install --upgrade robotframework robotframework-selenium2library && npm install chromedriver
     displayName: 'Install dependencies'
 
-  - bash: robot -d Results/ApiTestResults Tests/openWebPage.robot
+  - bash: robot -x outputunit.xml -d Results/ApiTestResults Tests/openWebPage.robot
     displayName: 'Run Robot Scripts'
 
   - task: PublishTestResults@2
